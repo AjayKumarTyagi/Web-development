@@ -14,10 +14,10 @@
         document.write("<br>"+obj.witcher);
         console.log(obj);
 
-        var objstring= JSON.stringify(obj);
+        var objstring= JSON.stringify(obj); // JSON.stringify is used to convert object into string
         document.write("<br>"+objstring);
 
-        var obj1= JSON.parse(objstring);
+        var obj1= JSON.parse(objstring);  // JSON.parse is used to convert string back to object
         document.write("<br>"+obj1.witcher);
 
 </script>
