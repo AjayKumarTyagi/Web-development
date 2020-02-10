@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var myObj= {
+        value:0,
+        increment:function(i){
+          this.value+=(typeof i === "number")? i:1;
+          document.write("<br>"+this.value);
+        }
+      }
+      myObj.increment();
+      myObj.increment(4);
+    </script>
+  </body>
+</html>
