@@ -6,9 +6,17 @@
 			var user = document.getElementById("username").value;
 			var pass = document.getElementById("password").value;
 
+			var apos= user.indexOf("@");
+			var dotpos= user.lastIndexOf(".");
+
 			if(user=="")
 			{
 				alert("enter user name");
+				return false;
+			}
+			else if(apos<1 || dotpos - apos <6)
+			{
+				alert("invalid email id");
 				return false;
 			}
 			else if(pass=="")
@@ -25,7 +33,7 @@
 
 <table>
 	<tr>
-		<td>Email or phone no. </td>
+		<td>Email </td>
 		<td><input type="text" id="username" name="username" placeholder="Enter email or phone"></td>
 	</tr>
 
