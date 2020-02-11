@@ -1,18 +1,39 @@
 <!DOCTYPE html>
+<head>
+	<script>
+		function clickbutton()
+		{
+			var user = document.getElementById("username").value;
+			var pass = document.getElementById("password").value;
+
+			if(user=="")
+			{
+				alert("enter user name");
+				return false;
+			}
+			else if(pass=="")
+			{
+				alert("password is compulsory");
+				return false;
+			}
+			return true;
+		}
+	</script>
+</head>
 <body>
-<form>
+<form action="submit.html" onsubmit="return clickbutton();" method="get">
 
 <table>
 	<tr>
 		<td>Email or phone no. </td>
-		<td><input type="email" maxlength=30 size=30 placeholder="Enter email or phone"></td>
+		<td><input type="text" id="username" name="username" placeholder="Enter email or phone"></td>
 	</tr>
 
 	<tr>
 		<td>Password </td>
-		<td><input type="password" maxlength=10 size=15 placeholder="Enter password"></td>
+		<td><input type="text" id="password" name="password" placeholder="Enter password"></td>
 	</tr>
-	
+<!--
 </table>
 
          Qualification: 12th passed<input type="checkbox" name="qualify">
@@ -22,8 +43,8 @@
 	Gender: Male<input type="radio" name="gender">
                         Female <input type="radio" name="gender">
                         Others <input type="radio" name="gender">
-			<br>Branch: 
-			
+			<br>Branch:
+
 		<select size="">
 		<<option>Devops</option>
 		<option>AI/ML</option>
@@ -36,18 +57,17 @@
 	<tr>
                 <td><input type="file" name="file"></td>
         </tr>
-	
+
 	<tr>
                 <td><input type="reset"></td>
-        </tr>
-
+        </tr> <--->
 	<tr>
 		<td><input type="submit" value="login"></td>
 	</tr>
-	
-	<tr>
-                <td><input type="image" src="sign up.png" width=300 height=100 alt="Sign up"></td>
-        </tr>
+
+<!--	<tr>
+                <td><input type="image" src="signup.png" width=300 height=100 alt="Sign up"></td>
+        </tr>  <--->
 
 </table>
 </form>
